@@ -3,6 +3,7 @@
 import RPi.GPIO as GPIO
 import sys
 import time
+import signal
 
 redLight = 20
 greenLight = 21
@@ -69,6 +70,13 @@ def beep():
 
 def cleanup():
 	GPIO.cleanup()
+
+def ctrlCHandler(signal, frame):
+	print('Exiting...')
+	cleanup()
+	sys.exit(0)
+
+signal.signal(signal.SIGINT, ctrlCHandler)
 
 if __name__ == "__main__":
 	run()
