@@ -4,6 +4,12 @@
 Raspberry Pi files are kept here for references.
 
 
+# GPIO Pinout Diagram
+
+
+![GPIO](http://www.element14.com/community/servlet/JiveServlet/previewBody/68203-102-6-294412/GPIO.png)
+
+
 # Installation
 
 First the image need to be installed to your SD Card. It can be 
